@@ -57,7 +57,7 @@ app.post('/auth', function(request, response) {
 			response.end();
 		});
 	} else {
-		response.send('Please try again.');
+		response.send('Please try again. sure');
 		//response.end();
 		response.render('login',{error: false});
 	}
