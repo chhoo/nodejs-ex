@@ -78,7 +78,7 @@ app.get('/home', function(request, response) {
      response.sendFile(path.join(__dirname + '/home.html'));
 
 	} else {
-		response.send('Please login to view this page!');
+		response.send('Please login to view this page! changes to rel branch');
 	}
 	response.end();
 });
