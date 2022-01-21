@@ -29,10 +29,9 @@ else
 # stop application server if any
 # eg. 
 # 
-#$app_name="notepad"
-#pid=`ps -ef | grep $app_name | awk '{print $2}'`
-#echo $pid
-#kill -9 $pid
+
+forever stop ..\..\..\bin\login.js
+forever list
 #
 # load the new binary runtime to the bin folder
 #
@@ -44,16 +43,12 @@ cp  ../bin/* $svr_env/ -Recurse -Force
 
 #
 # start nodejs application   
-cd $svr_env
-node login.js
-#echo "node login.js" > runapp.ps1
-#start-process -filepath ./runapp.ps1 
+
+forever start ..\..\..\bin\login.js
+forever list
+
 }
 #fi
 
-
 # #### the end ###
-
-# #
-# # mkdir tmp
 # # read -p "Press [Enter] key to start Deploy process..."
